@@ -53,9 +53,7 @@ Prove that the original people, stuff, and state are unchanged.
 ------------------------------------------------------------------------------------------------ */
 
 const setState = (arr) => {
-  const newPeoples = [...people];
-  const newStuffs = { ...stuff };
-  const state = {people: newPeoples, stuff: newStuffs};
+  const state = {people: [...people], stuff: { ...stuff }};
   return state;
 };
 
