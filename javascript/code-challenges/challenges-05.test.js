@@ -158,7 +158,12 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  const array = arr.map(obj => {
+    const newO = { ...obj };
+    delete newO.house;
+    return newO;
+  });
+  return array.map(obj => Object.values(obj)).flat(Infinity).filter(value => value !== null).length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -172,8 +177,13 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 ------------------------------------------------------------------------------------------------ */
 
 const houseSize = (arr) => {
-  const sizes = [];
-  // Solution code here...
+  const sizes = arr.map(obj => {
+    let object = {};
+    object.house = obj.house;
+    const newO = (({house, ...o }) => o)(obj);
+    object.members = Object.values(newO).flat(Infinity).length;
+    return object;
+  });
   return sizes;
 };
 
@@ -196,8 +206,13 @@ For example: [ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, .
 const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
-  const survivors = [];
-  // Solution code here...
+  const survivors = arr.map(obj => {
+    let object = {};
+    object.house = obj.house;
+    const newO = (({house, ...o }) => o)(obj);
+    object.members = Object.values(newO).flat(Infinity).filter(name => ! deceasedSpouses.includes(name)).length;
+    return object;
+  });
   return survivors;
 };
 
