@@ -177,7 +177,7 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce((a, c) => c.children ? a + c.children.length : a + 0, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -189,7 +189,7 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  return arr.reduce((a, c) => a + c, 0) / arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
