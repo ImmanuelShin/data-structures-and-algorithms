@@ -210,7 +210,7 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce((a, c) => isPrime(c) ? a + 1 : a + 0, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -252,7 +252,10 @@ const snorlaxData = {
 };
 
 const extractStats = (snorlaxData) => {
-  // Solution code here...
+  return snorlaxData.stats.reduce((a, c) => {
+    a[c.stat.name] = c.baseStat;
+    return a;
+  }, {});
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -266,7 +269,7 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+  return arr.filter(character => character.name.includes('a')).reduce((a, c) => {if(c.children) {a.push(c.children);} return a;}, []).flat(Infinity);
 };
 
 /* ------------------------------------------------------------------------------------------------
