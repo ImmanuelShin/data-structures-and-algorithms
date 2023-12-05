@@ -123,7 +123,7 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => `${a}`.length - `${b}`.length);
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -145,7 +145,7 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a.lastName.localeCompare(b.lastName, undefined, {sensitivity: 'base'}));
 };
 
 /* ------------------------------------------------------------------------------------------------
