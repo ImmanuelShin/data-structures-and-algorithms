@@ -174,7 +174,11 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for (let l = arr.length - 1; l >= 0; l -= 1) {
+    if (arr[l] % 2 === 0) {
+      arr.splice(l, 1);
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -193,9 +197,8 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  return ((numberOfCharacters > 0) ? (numberOfCharacters > str.length ? str.slice(numberOfCharacters) : str.slice(0, str.length - numberOfCharacters)) : str);
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
