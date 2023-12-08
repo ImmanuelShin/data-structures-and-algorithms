@@ -150,7 +150,7 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  return numbers.flat(Infinity).reduce((a, c) => a * c, 1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -170,7 +170,7 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  return weather.flat(Infinity).reduce((a, c) => a + c, 0) / weather.flat(Infinity).length;
 };
 
 /* ------------------------------------------------------------------------------------------------
