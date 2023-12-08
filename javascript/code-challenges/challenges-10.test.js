@@ -191,7 +191,7 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  return Math.min(...weather.map(week => week.reduce((a, c) => a + c, 0) / week.length));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -199,7 +199,7 @@ CHALLENGE 11 - Stretch Goal
 
 Write a function called excel that accepts a string representing rows and columns in a table.
 
-Rows are seperated by newline "\n" characters. Columns are seperated by commas. For example, '1,1,1\n4,4,4\n9,9,9' represents a 3x3 table.
+Rows are separated by newline "\n" characters. Columns are separated by commas. For example, '1,1,1\n4,4,4\n9,9,9' represents a 3x3 table.
 
 The function should parse the string as rows and columns and compute the sum of the values for each row. Return an array with the sum of the values in each row.
 
@@ -207,7 +207,7 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  return str.split('\n').map(string => string.split(',').reduce((a,c) => a + Number(c), 0));
 };
 
 /* ------------------------------------------------------------------------------------------------
