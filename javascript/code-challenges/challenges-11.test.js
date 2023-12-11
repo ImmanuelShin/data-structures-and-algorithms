@@ -87,7 +87,7 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  return arr.every(str => str.includes(target));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +103,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(array => array.filter(thing => !thing.includes('Brook')));
 };
 
 /* ------------------------------------------------------------------------------------------------
