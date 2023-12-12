@@ -123,7 +123,7 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
   ['Wednesday and Thursday', 'Thursday'],
   [],
   [],
-  []
+  [] 
 ]
 ------------------------------------------------------------------------------------------------ */
 
