@@ -113,7 +113,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  return arr.filter(city => /^[A-J]/.test(city));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  return /\b(?:October|Oct|october|oct)\b/g.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
