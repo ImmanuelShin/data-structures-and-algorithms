@@ -159,7 +159,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/[aeiouAEIOU]/g, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -175,7 +175,7 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
+  return str.split(' ').map(word => word.replace(/[^a-zA-Z0-9]/g, '')).filter(string => /\b(?:s)ells\b/.test(string) || /\b(?:sh)ells\b/.test(string) || /\b(?:seash)ells\b/.test(string));
 };
 
 /* ------------------------------------------------------------------------------------------------
