@@ -129,7 +129,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  return /\b(?:October|Oct|october|oct)\b/g.test(input);
+  return /\b(Oct)\b/.test(input) || /\b(October)\b/.test(input) || /\b(oct)\b/.test(input) || /\b(october)\b/.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,7 +143,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  return str.split(' ').filter(word => /^[^\W_]*[a-zA-Z0-9]$/.test(word)).map(string => string + ' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
