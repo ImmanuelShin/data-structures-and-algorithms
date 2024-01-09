@@ -7,6 +7,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 ### 401 Challenges
 
 - [Array Reverse](./python/code_challenges/array_reverse/README.md)
+- [Array Insert Shift](./python/code_challenges/array_shift_reverse/README.md)
 
 ## Repository Quick Tour and Usage
 
