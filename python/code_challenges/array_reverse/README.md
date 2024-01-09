@@ -4,7 +4,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![whiteboard](reverse-array.png)
+![whiteboard](./reverse-array.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
