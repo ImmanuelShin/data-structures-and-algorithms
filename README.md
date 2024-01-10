@@ -8,6 +8,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 
 - [Array Reverse](./python/code_challenges/array_reverse/README.md)
 - [Array Insert Shift](./python/code_challenges/array_shift_reverse/README.md)
+- [Array Binary Search](./python/code_challenges/array_binary_search/README.md)
 
 ## Repository Quick Tour and Usage
 
