@@ -86,3 +86,20 @@ class Linked_List:
         return
       node = node.next
     raise Exception("Value not found in list")
+
+  def kth_from_end(self, k):
+    if k < 0:
+      raise IndexError("Invalid Negative Value")
+    scout = army = self.head
+
+    for _ in range(k+1):
+      if scout is None:
+        raise IndexError("K is greater than list length")
+      scout = scout.next
+
+    while scout:
+      army = army.next
+      scout = scout.next
+
+    return army.data
+  
