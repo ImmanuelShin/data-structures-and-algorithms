@@ -12,7 +12,9 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 - [Row Summation](./python/code_challenges/row_summation/README.md)
 - [Linked List](./python/code_challenges/linked_list/README.md)
 - [Linked List 2](./python/code_challenges/linked_list/README2.md)
-- [Linked List 3](./python/code_challenges/linked_list/README3.md)
+- [Linked List kth](./python/code_challenges/linked_list/README3.md)
+- [Linked List Zip](./python/code_challenges/linked_list_zip/README.md)
+- [Stack and Queue](./python/code_challenges/stack_and_queue/README.md)
 
 ## Repository Quick Tour and Usage
 
