@@ -15,6 +15,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 - [Linked List kth](./python/code_challenges/linked_list/README3.md)
 - [Linked List Zip](./python/code_challenges/linked_list_zip/README.md)
 - [Stack and Queue](./python/code_challenges/stack_and_queue/README.md)
+- [Pseudo Queue](./python/code_challenges/stack_queue_pseudo/README.md)
 
 ## Repository Quick Tour and Usage
 
