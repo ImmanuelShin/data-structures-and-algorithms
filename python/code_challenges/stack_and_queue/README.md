@@ -1,4 +1,4 @@
-# Linked List
+# Stack and Queue
 <!-- Description of the challenge -->
 Implement Stack and Queue classes.
 

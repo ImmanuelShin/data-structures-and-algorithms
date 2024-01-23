@@ -1,4 +1,4 @@
-# Linked List
+# Linked List Zip
 <!-- Description of the challenge -->
 Zip two lists together
 

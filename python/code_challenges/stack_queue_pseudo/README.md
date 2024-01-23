@@ -1,4 +1,4 @@
-# Linked List
+# Pseudo Queue
 <!-- Description of the challenge -->
 Implement a Queue using two Stacks.
 
