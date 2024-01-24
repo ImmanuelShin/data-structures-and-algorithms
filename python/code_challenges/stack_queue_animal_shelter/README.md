@@ -142,3 +142,4 @@ def test_bad_pref():
     assert expected == actual
 
 ```
+![Animal Shelter Tests](./animal_shelter_tests.png)

@@ -213,3 +213,4 @@ def test_dequeue_error_queue():
   with pytest.raises(IndexError):
     queue.dequeue()
 ```
+![Stack Queue Tests](./stack_queue_tests.png)
