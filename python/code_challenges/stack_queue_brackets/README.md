@@ -33,65 +33,55 @@ def multi_bracket_validation(str):
 ```
 Tests:
 ```
-def test_single_cat():
-    shelter = AnimalShelter()
-    cat = Cat()
-    shelter.enqueue(cat)
-    actual = shelter.dequeue("cat")
-    expected = cat
+
+def test_validates_two_square_brackets():
+    actual = multi_bracket_validation("[]")
+    expected = True
     assert actual == expected
 
-def test_single_dog():
-    shelter = AnimalShelter()
-    dog = Dog()
-    shelter.enqueue(dog)
-    actual = shelter.dequeue("dog")
-    expected = dog
+def test_fails_two_square_brackets_flipped():
+    actual = multi_bracket_validation("][")
+    expected = False
     assert actual == expected
 
-def test_dog_preferred_but_cat_in_front():
-    shelter = AnimalShelter()
-    cat = Cat()
-    dog = Dog()
-    shelter.enqueue(cat)
-    shelter.enqueue(dog)
-    actual = shelter.dequeue("dog")
-    expected = dog
+def test_validates_two_braces():
+    actual = multi_bracket_validation("{}")
+    expected = True
     assert actual == expected
 
-def test_dog_then_cat():
-    shelter = AnimalShelter()
-    cat = Cat()
-    dog = Dog()
-    shelter.enqueue(dog)
-    shelter.enqueue(cat)
-    shelter.dequeue("dog")
-    actual = shelter.dequeue("cat")
-    expected = cat
+def test_fails_two_braces_flipped():
+    actual = multi_bracket_validation("}{")
+    expected = False
     assert actual == expected
 
-def test_dog_preferred_but_cat_in_front_twice():
-    shelter = AnimalShelter()
-    cat = Cat()
-    dog = Dog()
-    shelter.enqueue(cat)
-    shelter.enqueue(dog)
-    actual = shelter.dequeue("dog")
-    expected = dog
+def test_validates_two_parentheses():
+    actual = multi_bracket_validation("()")
+    expected = True
     assert actual == expected
-    with pytest.raises(ValueError):
-        shelter.dequeue("dog")
 
-def test_bad_pref():
-    shelter = AnimalShelter()
-    cat = Cat()
-    dog = Dog()
-    shelter.enqueue(dog)
-    shelter.enqueue(cat)
-    shelter.dequeue("dog")
-    actual = shelter.dequeue("lizard")
-    expected = None
-    assert expected == actual
+def test_fails_two_parentheses_flipped():
+    actual = multi_bracket_validation(")(")
+    expected = False
+    assert actual == expected
 
+def test_multi():
+    actual = multi_bracket_validation("{}(){}")
+    expected = True
+    assert actual == expected
+
+def test_nested():
+    actual = multi_bracket_validation("{([])}")
+    expected = True
+    assert actual == expected
+
+def test_mismatched():
+    actual = multi_bracket_validation("[}")
+    expected = False
+    assert actual == expected
+
+def test_extra_characters():
+    actual = multi_bracket_validation("()[[Extra Characters]]")
+    expected = True
+    assert actual == expected
 ```
-![Animal Shelter Tests](./animal_shelter_tests.png)
+![Stack Brackets Tests](./stack_brackets_tests.png)
