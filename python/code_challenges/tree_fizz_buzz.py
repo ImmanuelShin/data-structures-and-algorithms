@@ -1,4 +1,4 @@
-from data_structures.binary_tree import BinaryTree
+from code_challenges.trees.binary_tree import BinaryTree
 
 
 def fizz_buzz_tree():
