@@ -19,6 +19,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 - [Animal Shelter](./python/code_challenges/stack_queue_animal_shelter/README.md)
 - [Stack Queue Brackets](./python/code_challenges/stack_queue_brackets/README.md)
 - [Binary Tree](./python/code_challenges/trees/README.md)
+- [Max Binary Tree](./python/code_challenges/trees/README2.md)
 
 ## Repository Quick Tour and Usage
 
