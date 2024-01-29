@@ -44,6 +44,23 @@ class BinaryTree:
         self._post_order(node.left, arr)
         self._post_order(node.right, arr)
         arr.append(node.data)
+
+    def get_max(self):
+        if self.root is None:
+            return float('-inf')
+        max_val = self.root.data
+
+        def search(node):
+            nonlocal max_val
+            if not node:
+                return
+            max_val = max(max_val, node.data)
+            search(node.left)
+            search(node.right)
+
+        search(self.root)
+
+        return max_val
             
 class Node:
     def __init__(self, data):
