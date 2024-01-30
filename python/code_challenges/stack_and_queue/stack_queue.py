@@ -52,7 +52,7 @@ class Queue:
     data = self.front.data
     self.front = self.front.next
     if self.front is None:
-      self.tail = None
+      self.back = None
     return data
   
   def peek(self):
