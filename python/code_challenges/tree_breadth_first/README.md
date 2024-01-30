@@ -1,8 +1,42 @@
-import pytest
-from code_challenges.trees.binary_tree import BinaryTree, Node
-from code_challenges.tree_breadth_first.tree_breadth_first import breadth_first
+# Tree Breadth First
+<!-- Description of the challenge -->
+Breadth-first Traversal.
 
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Stack and Queue Whiteboard](./tree_breadth_first.png)
 
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Big O:
+
+- Time: O(n)
+- Space: O(n)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+```
+def breadth_first(tree):
+    list = []
+    if not tree.root:
+        return list
+    queue = Queue()
+    queue.enqueue(tree.root)
+
+    while not queue.is_empty():
+        node = queue.dequeue()
+        list.append(node.data)
+
+        if node.left:
+            queue.enqueue(node.left)
+        if node.right:
+            queue.enqueue(node.right)
+
+    return list
+```
+Tests:
+```
 # @pytest.mark.skip("TODO")
 def test_exists():
     assert breadth_first
@@ -90,3 +124,5 @@ def test_example_from_reading():
     actual = breadth_first(tree)
 
     assert actual == expected
+```
+![Stack Queue Tests](./tree_breadth_first_tests.png)
