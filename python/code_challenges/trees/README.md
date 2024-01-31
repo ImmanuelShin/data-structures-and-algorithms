@@ -4,7 +4,7 @@ Implement a Binary and Binary Search Tree
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Stack and Queue Whiteboard](./binary_tree.png)
+![Binary Tree Whiteboard](./binary_tree.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -229,4 +229,4 @@ def tree():
     tree.add(15)
     return tree
 ```
-![Animal Shelter Tests](./binary_tree_tests.png)
+![Binary Tree Tests](./binary_tree_tests.png)

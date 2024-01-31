@@ -4,7 +4,7 @@ Find the biggest leaf
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Stack and Queue Whiteboard](./binary_tree_max.png)
+![Max Binary Tree Whiteboard](./binary_tree_max.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -67,4 +67,4 @@ def test_max_val_empty_tree():
 
     assert actual == expected
 ```
-![Animal Shelter Tests](./binary_tree_max_tests.png)
+![Max Binary Tree Tests](./binary_tree_max_tests.png)

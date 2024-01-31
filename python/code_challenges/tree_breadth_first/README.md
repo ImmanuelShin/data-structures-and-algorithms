@@ -4,7 +4,7 @@ Breadth-first Traversal.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Stack and Queue Whiteboard](./tree_breadth_first.png)
+![Tree Breadth First Whiteboard](./tree_breadth_first.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -125,4 +125,4 @@ def test_example_from_reading():
 
     assert actual == expected
 ```
-![Stack Queue Tests](./tree_breadth_first_tests.png)
+![Tree Breadth First Tests](./tree_breadth_first_tests.png)
