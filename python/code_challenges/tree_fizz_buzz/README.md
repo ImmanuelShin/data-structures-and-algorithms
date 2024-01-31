@@ -1,9 +1,22 @@
-import pytest
-from code_challenges.tree_fizz_buzz.tree_fizz_buzz import fizz_buzz_tree
-from data_structures.kary_tree import KaryTree, Node
+# Tree Fizz Buzz
+<!-- Description of the challenge -->
+Conduct “FizzBuzz” on a k-ary tree while traversing through it to create a new tree.
 
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Tree Fizz Buzz Whiteboard](./tree_fizz_buzz.png)
 
-# @pytest.mark.skip("TODO")
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Big O:
+
+- Time: O(n)
+- Space: O(n)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+```
 def test_exists():
     assert fizz_buzz_tree
 
@@ -99,3 +112,5 @@ def tree():
     nine.children = [fourteen, fifteen]
 
     return KaryTree(one)
+```
+![Tree Fizz Buzz Tests](./tree_fizz_buzz_tests.png)
