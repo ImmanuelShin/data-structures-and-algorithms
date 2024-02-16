@@ -15,9 +15,11 @@ class Linked_List:
     if self.head is None:
       self.head = new_node
       return
-    else:
-      new_node.next = self.head
-      self.head = new_node
+    current = self.head
+    while current.next:
+      current = current.next
+
+    current.next = new_node
   
   def includes(self, data):
     if self.head is None:
@@ -86,6 +88,14 @@ class Linked_List:
         return
       node = node.next
     raise Exception("Value not found in list")
+  
+  def display(self):
+        result = []
+        current = self.head
+        while current:
+            result.append(current.data)
+            current = current.next
+        return result
 
   def kth_from_end(self, k):
     if k < 0:
