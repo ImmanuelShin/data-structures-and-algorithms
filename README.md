@@ -23,6 +23,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 - [Tree Breadth First](./python/code_challenges/tree_breadth_first/README.md)
 - [Tree Fizz Buzz](./python/code_challenges/tree_fizz_buzz/README.md)
 - [Hashtable](./python/code_challenges/hashtable/README.md)
+- [Hashmap Repeated Word](./python/code_challenges/hashmap_repeated_word/README.md)
 
 ## Repository Quick Tour and Usage
 
