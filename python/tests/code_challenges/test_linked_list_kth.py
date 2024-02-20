@@ -6,7 +6,7 @@ from code_challenges.linked_list.linked_list import Linked_List
 def test_kth_from_end_zero():
     linked_list = Linked_List()
     values = ["apples", "bananas", "cucumbers"]
-    for value in reversed(values):
+    for value in values:
         linked_list.insert(value)
     actual = linked_list.kth_from_end(0)
     expected = "cucumbers"
@@ -17,7 +17,7 @@ def test_kth_from_end_zero():
 def test_kth_from_end_one():
     linked_list = Linked_List()
     values = ["apples", "bananas", "cucumbers"]
-    for value in reversed(values):
+    for value in values:
         linked_list.insert(value)
     actual = linked_list.kth_from_end(1)
     expected = "bananas"
@@ -28,7 +28,7 @@ def test_kth_from_end_one():
 def test_kth_from_end_two():
     linked_list = Linked_List()
     values = ["apples", "bananas", "cucumbers"]
-    for value in reversed(values):
+    for value in values:
         linked_list.insert(value)
     actual = linked_list.kth_from_end(2)
     expected = "apples"
@@ -39,7 +39,7 @@ def test_kth_from_end_two():
 def test_kth_from_end_out_of_range():
     linked_list = Linked_List()
     values = ["apples", "bananas", "cucumbers"]
-    for value in reversed(values):
+    for value in values:
         linked_list.insert(value)
     with pytest.raises(IndexError):
         linked_list.kth_from_end(3)
@@ -49,7 +49,7 @@ def test_kth_from_end_out_of_range():
 def test_kth_from_end_under_range():
     linked_list = Linked_List()
     values = ["apples", "bananas", "cucumbers"]
-    for value in reversed(values):
+    for value in values:
         linked_list.insert(value)
     with pytest.raises(IndexError):
         linked_list.kth_from_end(-1)

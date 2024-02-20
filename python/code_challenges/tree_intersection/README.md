@@ -1,9 +1,42 @@
-import pytest
-from code_challenges.tree_intersection.tree_intersection import tree_intersection
-from code_challenges.trees.binary_tree import BinaryTree, Node
-from code_challenges.stack_and_queue.stack_queue import Queue
+# Tree Intersection
+<!-- Description of the challenge -->
+Find common values in 2 binary trees.
 
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Tree Intersection Whiteboard](./tree_intersection.png)
 
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Big O:
+
+- Time: O(n)
+- Space: O(n)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+```
+def tree_intersection(tree1, tree2):
+    seen1 = set()
+    seen2 = set()
+    def walk(node, is_first_tree):
+        if not node:
+            return
+        if is_first_tree:
+            seen1.add(node.data)
+        elif node.data in seen1:
+            seen2.add(node.data)
+        walk(node.left, is_first_tree)
+        walk(node.right, is_first_tree)
+
+    walk(tree1.root, True)
+    walk(tree2.root, False)
+    return seen2
+```
+
+Tests:
+```
 def test_exists():
     assert tree_intersection
 
@@ -65,3 +98,5 @@ def test_tree_intersection_no_common_values():
     expected = []
 
     assert sorted(actual) == sorted(expected)
+```
+![Tree Intersection Tests](./tree_intersection_tests.png)
