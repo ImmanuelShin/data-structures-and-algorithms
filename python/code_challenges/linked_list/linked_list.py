@@ -59,20 +59,23 @@ class Linked_List:
   
   def insert_before(self, value, data):
     if self.is_empty():
-      raise Exception("List is empty")
-    
+        raise Exception("List is empty")
+
     if self.head.data == value:
-      self.insert(data)
-      return
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+        return
 
     node = self.head
     while node.next is not None:
-      if node.next.data == value:
-        new_node = Node(data)
-        new_node.next = node.next
-        node.next = new_node
-        return
-      node = node.next
+        if node.next.data == value:
+            new_node = Node(data)
+            new_node.next = node.next
+            node.next = new_node
+            return
+        node = node.next
+
     raise Exception("Value not found in list")
   
   def insert_after(self, value, data):
