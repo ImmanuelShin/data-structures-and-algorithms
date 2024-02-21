@@ -25,6 +25,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 - [Hashtable](./python/code_challenges/hashtable/README.md)
 - [Hashmap Repeated Word](./python/code_challenges/hashmap_repeated_word/README.md)
 - [Tree Intersection](./python/code_challenges/tree_intersection/README.md)
+- [Hashtable Left Join](./python/code_challenges/hashtable_left_join/README.md)
 
 ## Repository Quick Tour and Usage
 
